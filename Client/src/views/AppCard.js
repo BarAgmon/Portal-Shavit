@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from  'styled-components';
+import PropTypes from 'prop-types';
 
-export default function ButtonBases(props) {
+export default function AppCard(props) {
   const image= props.image;
   const title = props.title;
   const href = props.href;
@@ -69,3 +70,9 @@ const Base = styled.a`
   height: 100%;
   text-decoration : none;
 `
+
+AppCard.propTypes = {
+  image:PropTypes.object,
+  title:PropTypes.string,
+  href:PropTypes.string
+};
