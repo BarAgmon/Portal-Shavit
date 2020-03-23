@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import AppCard from './views/AppCard';
+import Jenkinspic from './images/jenkins.png';
+import Dockerpic from './images/docker.png';
+import RocketChatpic from './images/rocketchat.png';
+import Nexuspic from './images/nexus.png';
+import Openshiftpic from './images/openshift.png';
+import Splunkpic from './images/splunk.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppDesign className="App">
+      <AllAppCards>
+        <AppCard title='Jenkins' image={Jenkinspic}/>
+        <AppCard title='Docker' image={Dockerpic}/>
+        <AppCard title='RocketChat' image={RocketChatpic}/>
+        <AppCard title='Nexus' image={Nexuspic}/>
+        <AppCard title='Openshift' image={Openshiftpic}/>   
+        <AppCard title='Splunk' image={Splunkpic}/>   
+      </AllAppCards>
+    </AppDesign>
   );
 }
 
 export default App;
+
+const AppDesign = styled.div`
+  display: flex;
+  align-items: center;
+  background-color:#191919;
+  min-height: 100vh; 
+  font-size: calc(10px + 2vmin);
+  color: white;
+`;
+
+const AllAppCards= styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  margin-right:2em;
+  margin-left: 2em;
+  height: 100%;
+  width: 100%;
+`
