@@ -69,10 +69,10 @@ const Base = styled.a`
   width: 100% !important;
   height: 100%;
   text-decoration : none;
-`
+`;
 
 AppCard.propTypes = {
-  image:PropTypes.object,
-  title:PropTypes.string,
-  href:PropTypes.string
+  image:PropTypes.string.isRequired,
+  title:PropTypes.string.isRequired,
+  href:PropTypes.string.isRequired
 };
