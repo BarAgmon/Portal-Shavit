@@ -1,117 +1,69 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import ButtonBase from '@material-ui/core/ButtonBase';
-import Typography from '@material-ui/core/Typography';
-import Jenkinspic from '../images/rocketchat.png'
 import styled from  'styled-components';
 
-export default function ButtonBases() {
-  const classes = useStyles();
+export default function ButtonBases(props) {
+  const image= props.image;
+  const title = props.title;
 
   return (
-    <div className={classes.root}>
-        <ButtonBase
-          focusRipple
-          key='RocketChat'
-          className={classes.image}
-          focusVisibleClassName={classes.focusVisible}
-          style={{
-            width: '30%',
-          }}
-        >
-          <span
-            className={classes.imageSrc}
-            style={{
-              background: `url(${Jenkinspic})`,
-            }}
-          />
-          <span className={classes.imageBackdrop} />
-          <span className={classes.imageButton}>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              color="inherit"
-              className={classes.imageTitle}
-            >
-              RockatChat
-              <span className={classes.imageMarked} />
-            </Typography>
-          </span>
-        </ButtonBase>
-    </div>
+    <Root>
+        <Base>
+          <ImageSource image={image}/>
+          <ImageBackdrop/>
+            <ImageTitle>
+                {title}
+            </ImageTitle>
+        </Base>
+    </Root>
   );
 }
 
+const ImageBackdrop = styled.span`
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.75;
+    border: 0em solid currentColor;
+    transition: opacity border-width 300ms;
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    minWidth: 300,
-    width: '100%',
-  },
-  image: {
-    position: 'relative',
-    height: 200,
-    [theme.breakpoints.down('xs')]: {
-      width: '100% !important', // Overrides inline-style
-      height: 100,
-    },
-    '&:hover, &$focusVisible': {
-      zIndex: 1,
-      '& $imageBackdrop': {
-        opacity: 0.15,
-      },
-      '& $imageMarked': {
-        opacity: 0,
-      },
-      '& $imageTitle': {
-        border: '4px solid currentColor',
-      },
-    },
-  },
-  focusVisible: {},
-  imageButton: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.palette.common.white,
-  },
-  imageSrc: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 40%',
-  },
-  imageBackdrop: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
-    transition: theme.transitions.create('opacity'),
-  },
-  imageTitle: {
-    position: 'relative',
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
-  },
-  imageMarked: {
-    height: 3,
-    width: 18,
-    backgroundColor: theme.palette.common.white,
-    position: 'absolute',
-    bottom: -2,
-    left: 'calc(50% - 9px)',
-    transition: theme.transitions.create('opacity'),
-  },
-}));
+    &:hover {
+      opacity: 0.15;
+      border-width: 0.25em;
+    }
+`;
+
+const Root = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0.5em;
+    width:8.5em;
+    height:5.5em;
+`;
+const ImageTitle = styled.div`
+  position: relative;
+  position: relative;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 1em;
+`;
+
+const ImageSource = styled.span `
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-image:url(${props => props.image});
+`;
+const Base = styled.div`
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100% !important;
+  height: 100%;
+`
