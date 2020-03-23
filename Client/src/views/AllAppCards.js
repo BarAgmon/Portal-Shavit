@@ -11,12 +11,12 @@ import Splunkpic from '../images/splunk.jpg';
 export default function AllAppCards() {
   return (
       <AllAppCardsDesign>
-        <AppCard title='Jenkins' image={Jenkinspic}/>
-        <AppCard title='Docker' image={Dockerpic}/>
-        <AppCard title='RocketChat' image={RocketChatpic}/>
-        <AppCard title='Nexus' image={Nexuspic}/>
-        <AppCard title='Openshift' image={Openshiftpic}/>   
-        <AppCard title='Splunk' image={Splunkpic}/>   
+        <AppCard title='Jenkins' image={Jenkinspic} href='https://he.wikipedia.org/wiki/DevOps'/>
+        <AppCard title='Docker' image={Dockerpic} href='https://he.wikipedia.org/wiki/DevOps'/>
+        <AppCard title='RocketChat' image={RocketChatpic} href='https://he.wikipedia.org/wiki/DevOps'/>
+        <AppCard title='Nexus' image={Nexuspic} href='https://he.wikipedia.org/wiki/DevOps'/>
+        <AppCard title='Openshift' image={Openshiftpic} href='https://he.wikipedia.org/wiki/DevOps' />   
+        <AppCard title='Splunk' image={Splunkpic} href='https://he.wikipedia.org/wiki/DevOps'/>   
       </AllAppCardsDesign>
   );
 }

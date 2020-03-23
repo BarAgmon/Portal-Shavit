@@ -4,10 +4,10 @@ import styled from  'styled-components';
 export default function ButtonBases(props) {
   const image= props.image;
   const title = props.title;
-
+  const href = props.href;
   return (
     <Root>
-        <Base>
+        <Base href={href}>
           <ImageSource image={image}/>
           <ImageBackdrop/>
             <ImageTitle>
@@ -47,6 +47,7 @@ const ImageTitle = styled.div`
   position: relative;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 1em;
+  color : white;
 `;
 
 const ImageSource = styled.span `
@@ -59,11 +60,12 @@ const ImageSource = styled.span `
   background-position: center;
   background-image:url(${props => props.image});
 `;
-const Base = styled.div`
+const Base = styled.a`
   display: flex ;
   align-items: center;
   justify-content: center;
   position: relative;
   width: 100% !important;
   height: 100%;
+  text-decoration : none;
 `
