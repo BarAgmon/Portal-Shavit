@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import AllAppCards from './views/AllAppCards';
+import Navbar from "./views/Navbar";
 
 function App() {
   return (
     <AppDesign className="App">
+       <Navbar/>
       <AllAppCards/>
     </AppDesign>
   );
