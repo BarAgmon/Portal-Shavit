@@ -1,31 +1,33 @@
 import React from 'react';
-import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import { Icon, Menu, Sidebar } from 'semantic-ui-react';
+import '../Semantic-UI-CSS-master/semantic.min.css';
 
-const SidebarApp = () => (
-    <Sidebar.Pushable as={Segment}>
+const SidebarApp = () => {
+    return(
         <Sidebar
             as={Menu}
-            animation='overlay'
+            animation='uncover'
+            direction={"left"}
             icon='labeled'
             inverted
             vertical
-            visible
+            visible='true'
             width='thin'
         >
             <Menu.Item as='a'>
-                <Icon name='home' />
+                <Icon name='database' />
                 Backup and restore
             </Menu.Item>
             <Menu.Item as='a'>
-                <Icon name='gamepad' />
+                <Icon name='dochub' />
                 Documentation
             </Menu.Item>
             <Menu.Item as='a'>
-                <Icon name='camera' />
+                <Icon name='docker' />
                 Docker CLI
             </Menu.Item>
         </Sidebar>
-    </Sidebar.Pushable>
-);
+    );
+}
 
 export default SidebarApp
