@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import AllAppCards from './views/AllAppCards';
-import Navbar from "./views/Navbar";
+import SidebarApp from "./views/Sidebar";
 import DevopsPic from './views/DevopsPic';
 
 function App() {
   return (
     <AppDesign className="App">
-       <Navbar/>
+       <SidebarApp/>
       <AllAppCards/>
       <DevopsPic/>
     </AppDesign>
