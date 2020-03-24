@@ -2,10 +2,7 @@ import React from 'react';
 import styled from  'styled-components';
 import PropTypes from 'prop-types';
 
-export default function AppCard(props) {
-  const image= props.image;
-  const title = props.title;
-  const href = props.href;
+export default function AppCard({image, title, href}) {
   return (
     <Root>
         <Base href={href}>
