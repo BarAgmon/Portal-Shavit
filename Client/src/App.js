@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import AllAppCards from './views/AllAppCards';
+import AllAppCards from './views/Links/AllAppCards';
 import DevopsPic from './views/DevopsPic';
+import HomePage from './views/DBsControl/HomePage'
 
 function App() {
   return (
     <AppDesign className="App">
-      <AllAppCards/>
-      <DevopsPic/>
+      <HomePage/>
     </AppDesign>
   );
 }
@@ -24,5 +24,6 @@ const AppDesign = styled.div`
   color: white;
   flex-wrap:wrap;
   justify-content:center;
+  height: 100vh; 
 `;
 

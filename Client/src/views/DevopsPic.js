@@ -16,5 +16,5 @@ const StyledImg = styled.img`
 const StyledDiv = styled.div`
     display: flex;
     align-content: flex-end;
-    margin-bottom: -10em;
+    // margin-bottom:-30em;
 `
