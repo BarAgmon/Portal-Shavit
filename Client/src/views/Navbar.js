@@ -14,8 +14,7 @@ export default function Navbar() {
     return (
         <div className={classes.palette}>
             <AppBar display="flex" justifyContent="center" className={classes.appBar} title="Portal Shavit">
-                <Tabs>
-                    <Tab label="&nbsp;Maya is actually bar&nbsp;" />
+                <Tabs><Tab label="&nbsp;Maya is actually bar&nbsp;" />
                     <Tab label="&nbsp;Documentation&nbsp;" />
                     <Tab label="&nbsp;Docker CLI&nbsp;" />
                     <Tab label="&nbsp;Backup And Restore&nbsp;" />
