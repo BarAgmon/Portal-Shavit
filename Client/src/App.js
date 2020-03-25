@@ -6,11 +6,15 @@ import DevopsPic from './views/DevopsPic';
 
 function App() {
   return (
-    <AppDesign className="App">
-       <SidebarApp/>
-      <AllAppCards/>
-      <DevopsPic/>
-    </AppDesign>
+        <AppDesign className="App">
+            <div>
+                <SidebarApp/>
+            </div>
+            <div>
+              <AllAppCards/>
+              <DevopsPic/>
+            </div>
+        </AppDesign>
   );
 }
 
@@ -19,7 +23,7 @@ export default App;
 const AppDesign = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   background-color:#191919;
   min-height: 100vh; 
   font-size: calc(10px + 2vmin);
