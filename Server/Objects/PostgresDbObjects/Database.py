@@ -8,3 +8,8 @@ class Database:
     def setName(self, newName):
         self.name = newName
     
+    def __eq__(self, other):
+        return self.getName() == other.getName()
+    
+    def __hash__(self):
+        return hash((self.name))

@@ -3,18 +3,18 @@ set_package_attribute.init()
 from flask import Flask
 app = Flask(__name__)
 import unittest
-from .UnitTesting.ServerConnectionUnitTesting import ServerConnectionUnitTesting
+from .UnitTesting.ServerControllerUnitTesting import ServerControllerUnitTesting
 
 
 def create_suite():
     test_suite = unittest.TestSuite()
-    test_suite.addTest(ServerConnectionUnitTesting())
+    testsToAdd=unittest.defaultTestLoader.loadTestsFromTestCase(ServerControllerUnitTesting)
+    test_suite.addTest(testsToAdd)
     return test_suite
 
 def run_all_tests():
-    suite = create_suite()
     runner=unittest.TextTestRunner()
-    runner.run(suite)
+    runner.run(create_suite())
 
 if __name__ == '__main__':
     run_all_tests()
