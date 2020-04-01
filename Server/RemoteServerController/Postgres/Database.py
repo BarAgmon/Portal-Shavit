@@ -18,14 +18,14 @@ def get_all_dbs(serverUsername, serverPassword):
 #     client.exec_command('su - postgres')
 #     stdout = client.exec_command("psql -c '" + GET_ALL_DATABASES_COMMAND + "'")
 #     return stdout
-    return {Database("plz"), Database("balagan"), Database("devops"), Database("randomName"), Database("banana")}
+    return [Database("plz"), Database("balagan"), Database("devops"), Database("randomName"), Database("banana")]
 
 def convert_dbs_string_to_dbs_list(dbString):
     FIRST_LINE_NUMBER_WITH_DB_NAME = 2
     dbsStringAsList = dbString.splitlines()  
-    finalDatabaseList = set()
+    finalDatabaseList = []
     for i in range (FIRST_LINE_NUMBER_WITH_DB_NAME, len(dbsStringAsList) - 1):
-        finalDatabaseList.add(Database(dbsStringAsList[i]))
+        finalDatabaseList.append(Database(dbsStringAsList[i]))
     return finalDatabaseList
 
     

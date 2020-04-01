@@ -4,8 +4,7 @@ from flask import Flask
 app = Flask(__name__)
 import unittest
 from .UnitTesting.ServerControllerUnitTesting import ServerControllerUnitTesting
-
-
+from .Api.PostgresApi import * 
 def create_suite():
     test_suite = unittest.TestSuite()
     testsToAdd=unittest.defaultTestLoader.loadTestsFromTestCase(ServerControllerUnitTesting)

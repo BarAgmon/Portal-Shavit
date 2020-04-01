@@ -3,14 +3,14 @@ class Schema:
         self.name = name
         self.database = database
 
-    def getName(self):
+    def get_name(self):
         return self.name
     
-    def setName(self, newName):
+    def set_name(self, newName):
         self.name = newName
     
-    def getDatabase(self):
+    def get_database(self):
         return self.database
     
-    def setDatabase(self, newDatabase):
+    def set_database(self, newDatabase):
         self.database = newDatabase
