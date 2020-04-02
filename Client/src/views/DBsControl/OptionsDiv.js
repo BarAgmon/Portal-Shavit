@@ -10,8 +10,8 @@ export default function OptionsDiv() {
             <Grid columns={numberOfColumns} stackable textAlign='center'>
                 <Divider vertical>Or</Divider>
                 <Grid.Row verticalAlign='middle'>
-                    <GridColumn iconName='upload' text='Backup a schema or your whole db' buttonColor='blue' buttonContent='Backup'/>
-                    <GridColumn iconName='sync' text='Restore a schema or your whole db' buttonColor='blue' buttonContent='Restore'/>
+                    <GridColumn iconName='upload' text='Backup a schema or your whole db' buttonType="primary" buttonContent='Backup' path="/backup"/>
+                    <GridColumn iconName='sync' text='Restore a schema or your whole db' buttonType="primary" buttonContent='Restore' path="/restore"/>
                 </Grid.Row>
             </Grid>
         </StyledSegment>

@@ -1,5 +1,5 @@
 import React from 'react';
-import devopsPic from '../images/devops.png';
+import devopsPic from '../../images/devops.png';
 import styled from 'styled-components';
 
 export default function DevopsPic() {
