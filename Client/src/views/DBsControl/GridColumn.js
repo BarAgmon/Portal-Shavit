@@ -3,13 +3,13 @@ import {Button,Grid,Header,Icon} from 'semantic-ui-react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-export default function GridColumn({iconName, text, buttonColor, buttonContent}){
+export default function GridColumn({iconName, text, buttonColor, buttonContent, onClick}){
     return (
         <SizeGridColumn>
             <PlaceComponents icon>
                 <div><Icon name={iconName} /></div>
                 <div>{text}</div>
-                <div><Button basic color={buttonColor} content={buttonContent} /></div>
+                <div><Button basic color={buttonColor} content={buttonContent} onClick={onClick}/></div>
             </PlaceComponents>
          </SizeGridColumn>
     );

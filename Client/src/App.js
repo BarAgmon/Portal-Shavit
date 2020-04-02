@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AllAppCards from './views/Links/AllAppCards';
 import DevopsPic from './views/DevopsPic';
 import HomePage from './views/DBsControl/HomePage'
+import TransferList from './views/DBsControl/TransferList'
 
 function App() {
   return (
