@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import AllAppCards from './views/AllAppCards';
 import SidebarApp from "./views/Sidebar/Sidebar";
-import DevopsPic from './views/DevopsPic';
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import Database from "./views/DBsControl/HomePage";
+import DatabaseBackup from "./views/DBsControl/BackupPage";
+import Links from "./views/Links/HomePage";
 
 function App() {
   return (
@@ -10,10 +12,13 @@ function App() {
             <div>
                 <SidebarApp/>
             </div>
-            <div>
-              <AllAppCards/>
-              <DevopsPic/>
-            </div>
+            <Router>
+              <Switch>
+                    <Route path="/backup" component={DatabaseBackup}/>
+                    <Route path="/database" component={Database}/>
+                    <Route path="/" component={Links}/>
+                </Switch>
+            </Router>
         </AppDesign>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import devopsPic from '../images/devops.png';
+import devopsPic from '../../images/devops.png';
 import styled from 'styled-components';
 
 export default function DevopsPic() {
@@ -16,5 +16,5 @@ const StyledImg = styled.img`
 const StyledDiv = styled.div`
     display: flex;
     align-content: flex-end;
-    margin-bottom: -10em;
+    // margin-bottom:-30em;
 `
