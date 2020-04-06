@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import AllAppCards from './views/AllAppCards';
-import SidebarApp from "./views/Sidebar";
+import SidebarApp from "./views/Sidebar/Sidebar";
 import DevopsPic from './views/DevopsPic';
 
 function App() {
