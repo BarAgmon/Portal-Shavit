@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import AllAppCards from './views/Links/AllAppCards';
 import DevopsPic from './views/DevopsPic';
-import HomePage from './views/DBsControl/HomePage'
-import TransferList from './views/DBsControl/TransferList'
+import Navbar from "./views/Navbar";
 
 function App() {
   return (
     <AppDesign className="App">
-      <HomePage/>
+       <Navbar/>
+      <AllAppCards/>
     </AppDesign>
   );
 }
