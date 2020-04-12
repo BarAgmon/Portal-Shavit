@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import AllAppCards from './views/Links/AllAppCards';
 import SidebarApp from "./views/Sidebar";
-import DevopsPic from './views/DevopsPic';
-import Navbar from "./views/Navbar";
 
 function App() {
   return (
