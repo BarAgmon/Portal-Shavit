@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SidebarApp from "./views/Router/Sidebar";
+import SidebarApp from "./views/Sidebar/Sidebar";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Database from "./views/DBsControl/HomePage";
 import DatabaseBackup from "./views/DBsControl/BackupPage";
