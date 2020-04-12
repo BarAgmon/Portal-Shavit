@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import AppCard from './AppCard';
-import Jenkinspic from '../images/jenkins.png';
-import Dockerpic from '../images/docker.png';
-import RocketChatpic from '../images/rocketchat.png';
-import Nexuspic from '../images/nexus.png';
-import Openshiftpic from '../images/openshift.png';
-import Splunkpic from '../images/splunk.jpg';
+import Jenkinspic from '../../images/jenkins.png';
+import Dockerpic from '../../images/docker.png';
+import RocketChatpic from '../../images/rocketchat.png';
+import Nexuspic from '../../images/nexus.png';
+import Openshiftpic from '../../images/openshift.png';
+import Splunkpic from '../../images/splunk.jpg';
 
 export default function AllAppCards() {
   return (

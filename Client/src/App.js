@@ -1,14 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import AllAppCards from './views/AllAppCards';
-import DevopsPic from './views/DevopsPic';
+import SidebarApp from "./views/Router/Sidebar";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import Database from "./views/DBsControl/HomePage";
+import DatabaseBackup from "./views/DBsControl/BackupPage";
+import Links from "./views/Links/HomePage";
 
 function App() {
   return (
-    <AppDesign className="App">
-      <AllAppCards/>
-      <DevopsPic/>
-    </AppDesign>
+        <AppDesign className="App">
+            <div>
+                <SidebarApp/>
+            </div>
+            <Router>
+              <Switch>
+                    <Route path="/backup" component={DatabaseBackup}/>
+                    <Route path="/database" component={Database}/>
+                    <Route path="/" component={Links}/>
+                </Switch>
+            </Router>
+        </AppDesign>
   );
 }
 
@@ -17,7 +28,7 @@ export default App;
 const AppDesign = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   background-color:#191919;
   min-height: 100vh; 
   font-size: calc(10px + 2vmin);

@@ -1,0 +1,3 @@
+POSTGRES_HOST_NAME="fill_at_office"
+GET_ALL_DATABASES_COMMAND="SELECT datname FROM pg_database"
+GET_ALL_SCHEMAS_COMMAND = "\\dn" 
