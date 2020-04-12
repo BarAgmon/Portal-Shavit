@@ -1,7 +1,6 @@
 import React from 'react';
 import { Icon, Menu, Sidebar } from 'semantic-ui-react';
-import '../Semantic-UI-CSS-master/semantic.min.css';
-
+import '../../Semantic-UI-CSS-master/semantic.min.css';
 const SidebarApp = () => {
     return(
         <Sidebar
